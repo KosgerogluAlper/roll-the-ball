@@ -5,11 +5,40 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
+    public int CurrentSceneIndex
+    {
+        get
+        {
+            return currrentSceneIndex;
+        }
+        set
+        {
+            currrentSceneIndex = value;
+        }
+    }
+    private int currrentSceneIndex;
+
+    Manager manager;
+    public void Awake()
+    {
+        manager = GameObject.FindObjectOfType<Manager>();
+    }
+
+    private void Update()
+    {
+        currrentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+    }
+
+    public void StartPanelButton()
+    {
+        manager.StartPanel.SetActive(false);
+    }
+
     public void Reset()
     {
-        int currrentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currrentSceneIndex);
     }
+
     public void NextLevel()
     {
         int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;

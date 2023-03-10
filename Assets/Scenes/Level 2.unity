@@ -2300,7 +2300,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 604692365}
-  m_LocalRotation: {x: 0.33100694, y: 0.000000016236351, z: -0.000000005695405, w: 0.9436283}
+  m_LocalRotation: {x: 0.33100694, y: 0.000000016236775, z: -0.000000005695553, w: 0.9436283}
   m_LocalPosition: {x: -2.78, y: 4.5000005, z: 0.8000002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2775,7 +2775,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 796231102}
-  m_LocalRotation: {x: -0, y: 7.81597e-14, z: -6.217249e-14, w: 1}
+  m_LocalRotation: {x: -0, y: 0.000000026876496, z: -0.000000021501195, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4562,6 +4562,7 @@ MonoBehaviour:
   LosePanel: {fileID: 1976417080}
   Timetext: {fileID: 168471814}
   Skor: {fileID: 269466615}
+  LevelText: {fileID: 7771573722784447648}
   isGameFinish: 0
   isGameOver: 0
 --- !u!4 &1482949881
@@ -7946,6 +7947,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a7189f45a03b1e4b9cecc72155e16f2, type: 3}
+--- !u!114 &7771573722784447648 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 848029588, guid: 4a7189f45a03b1e4b9cecc72155e16f2, type: 3}
+  m_PrefabInstance: {fileID: 7771573722784447647}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!33 &8303417272167450944
 MeshFilter:
   m_ObjectHideFlags: 0
