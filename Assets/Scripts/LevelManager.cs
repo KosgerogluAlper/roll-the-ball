@@ -17,21 +17,20 @@ public class LevelManager : MonoBehaviour
         }
     }
     private int currrentSceneIndex;
-
     Manager manager;
     public void Awake()
     {
         manager = GameObject.FindObjectOfType<Manager>();
     }
-
     private void Update()
     {
         currrentSceneIndex = SceneManager.GetActiveScene().buildIndex;
     }
 
-    public void StartPanelButton()
+    public void startPanelButton()
     {
         manager.StartPanel.SetActive(false);
+        Time.timeScale = 1f;
     }
 
     public void Reset()
@@ -39,7 +38,7 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene(currrentSceneIndex);
     }
 
-    public void NextLevel()
+    public void nextLevel()
     {
         int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
         int totalSceneIndex = SceneManager.sceneCountInBuildSettings - 1;
@@ -50,7 +49,21 @@ public class LevelManager : MonoBehaviour
         }
         if (nextSceneIndex > totalSceneIndex)
         {
+            PlayerPrefs.DeleteAll(); 
             SceneManager.LoadScene(0);
+           
         }
+
     }
+    public void exitEvent()
+    {
+        PlayerPrefs.DeleteAll();
+        Application.Quit();
+    }
+    public void cancelEvent()
+    {
+       manager.EndPanel.SetActive(false);
+        Time.timeScale = 1f;
+    }
+
 }

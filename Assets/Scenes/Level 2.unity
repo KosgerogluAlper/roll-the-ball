@@ -2300,7 +2300,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 604692365}
-  m_LocalRotation: {x: 0.33100694, y: 0.000000016236775, z: -0.000000005695553, w: 0.9436283}
+  m_LocalRotation: {x: 0.33100694, y: -0.000000018785373, z: 0.000000006589553, w: 0.9436283}
   m_LocalPosition: {x: -2.78, y: 4.5000005, z: 0.8000002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2775,7 +2775,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 796231102}
-  m_LocalRotation: {x: -0, y: 0.000000026876496, z: -0.000000021501195, w: 1}
+  m_LocalRotation: {x: -0, y: 0.0000000026803892, z: -0.0000000021443132, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4560,6 +4560,8 @@ MonoBehaviour:
   - {fileID: 747627826}
   WinPanel: {fileID: 1027735731}
   LosePanel: {fileID: 1976417080}
+  startPanel: {fileID: 7771573722784447650}
+  endPanel: {fileID: 7771573722784447649}
   Timetext: {fileID: 168471814}
   Skor: {fileID: 269466615}
   LevelText: {fileID: 7771573722784447648}
@@ -7845,6 +7847,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 60371026, guid: 4a7189f45a03b1e4b9cecc72155e16f2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 906358170}
+    - target: {fileID: 650433186, guid: 4a7189f45a03b1e4b9cecc72155e16f2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 906358170}
+    - target: {fileID: 236500046457069480, guid: 4a7189f45a03b1e4b9cecc72155e16f2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 906358170}
     - target: {fileID: 7771573722533976290, guid: 4a7189f45a03b1e4b9cecc72155e16f2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -7941,10 +7955,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 7771573723098549269, guid: 4a7189f45a03b1e4b9cecc72155e16f2, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a7189f45a03b1e4b9cecc72155e16f2, type: 3}
 --- !u!114 &7771573722784447648 stripped
@@ -7958,6 +7968,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &7771573722784447649 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1412308684, guid: 4a7189f45a03b1e4b9cecc72155e16f2, type: 3}
+  m_PrefabInstance: {fileID: 7771573722784447647}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7771573722784447650 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2673772843766891991, guid: 4a7189f45a03b1e4b9cecc72155e16f2, type: 3}
+  m_PrefabInstance: {fileID: 7771573722784447647}
+  m_PrefabAsset: {fileID: 0}
 --- !u!33 &8303417272167450944
 MeshFilter:
   m_ObjectHideFlags: 0

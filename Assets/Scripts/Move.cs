@@ -10,12 +10,11 @@ public class Move : MonoBehaviour
     private Manager manager;
     private float xInput;
     private float zInput;
-   
     private void Awake()
     {
-     
         rigidbody = GetComponent<Rigidbody>();
         manager = FindObjectOfType<Manager>();
+
     }
     void Update()
     {
@@ -32,11 +31,16 @@ public class Move : MonoBehaviour
             rigidbody.isKinematic = true;
         }
     }
-
     private void getInput()
     {
         xInput = Input.GetAxis("Horizontal");
         zInput = Input.GetAxis("Vertical");
+
+        if(Input.GetKeyDown(KeyCode.Escape)) 
+        {
+            manager.EndPanel.SetActive(true);
+            Time.timeScale = 0f;
+        }
     }
     private void playerMove()
     {

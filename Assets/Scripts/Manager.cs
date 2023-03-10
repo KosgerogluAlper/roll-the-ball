@@ -13,16 +13,26 @@ public class Manager : MonoBehaviour
     [SerializeField] GameObject WinPanel;
     [SerializeField] GameObject LosePanel;
     [SerializeField] GameObject startPanel;
+    [SerializeField] GameObject endPanel;
     [SerializeField] private Text Timetext;
     [SerializeField] private Text Skor;
     [SerializeField] private Text LevelText;
-    private bool isStartPanelShow=false;
-    public bool isGameFinish = false;
-    public bool isGameOver = false;
     ScoreManager scoreManager;
     LevelManager levelManager;
-
-
+    private bool isStartPanelShow = false;
+    public bool isGameFinish = false;
+    public bool isGameOver = false;
+    public GameObject EndPanel
+    {
+        get
+        {
+            return endPanel;
+        }
+        set
+        {
+            endPanel = value;
+        }
+    }
     public GameObject StartPanel
     {
         get
@@ -34,7 +44,6 @@ public class Manager : MonoBehaviour
             startPanel = value;
         }
     }
-
     public void Awake()
     {
         scoreManager = GameObject.FindObjectOfType<ScoreManager>();
@@ -42,20 +51,24 @@ public class Manager : MonoBehaviour
     }
     public void Start()
     {
-        if (isStartPanelShow == false &&!PlayerPrefs.HasKey("gameStarted"))
+        startShowPanel();
+    }
+    private void startShowPanel()
+    {
+        if (isStartPanelShow == false && !PlayerPrefs.HasKey("gameStarted"))
         {
+            Time.timeScale = 0f;
             startPanel.SetActive(true);
             isStartPanelShow = false;
             PlayerPrefs.SetInt("gameStarted", 0);
+
         }
     }
-
     void Update()
     {
         timeShow();
         showPanel();
     }
-
     private void showPanel()
     {
         if ((int)scoreManager.Score >= 200 && isGameOver == false)
@@ -78,23 +91,13 @@ public class Manager : MonoBehaviour
             }
             LosePanel.SetActive(true);
             WinPanel.SetActive(false);
-           
         }
-
-
-
     }
-
-
-
-
-
     private void destroyObjects()
     {
         DestroyAftergameObjects.AddRange(GameObject.FindGameObjectsWithTag("Objects"));
         DestroyAftergameObjects.AddRange(GameObject.FindGameObjectsWithTag("Enemy"));
     }
-
     private void timeShow()
     {
         Timetext.text = "Time : " + (int)Time.timeSinceLevelLoad;

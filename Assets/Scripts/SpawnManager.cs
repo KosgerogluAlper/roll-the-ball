@@ -9,18 +9,13 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] private Transform[] spawnPozitions;
     [SerializeField] private GameObject[] randomGameObject;
     GameObject[] enemies;
- //   GameObject[] effects;
-
     private float enemySpawnPeriod = 4f;
     private float TotalTime = 0f;
     void Update()
     {
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
         spawnObjects();
-       // effects = GameObject.FindGameObjectsWithTag("Effect");
-   
     }
-
     private void spawnObjects()
     {
         if (Time.timeSinceLevelLoad > TotalTime)
