@@ -1,5 +1,5 @@
 # Roll The Ball
-This game was developed by using Unity.<br/> The player controls a ball and must accumulate scores to progress to the next level. The enemies' aim is to obstruct the player. If an enemy touches the player, the game is over."
+This game was developed by using Unity.<br/> The player controls a ball and must accumulate scores to progress to the next level. The enemies' aim is to obstruct the player. If an enemy touches the player, the game is over.
 
 ## Gameplay Video
 
